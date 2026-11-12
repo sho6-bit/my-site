@@ -780,6 +780,66 @@
     .project-preview-dialog button { right: 0; }
   }
 
+  @media (max-width: 600px) {
+    html, body { max-width: 100%; overflow-x: hidden; }
+    .wrap { width: calc(100% - 24px); }
+    .topbar { top: 10px; max-width: calc(100% - 28px); }
+    .topbar nav { gap: 0; }
+    .topbar nav a { padding: 10px 11px; font-size: 10px; }
+    .topbar nav .nav-home { width: 32px; height: 34px; }
+
+    .statement-section {
+      width: 100%;
+      padding: 96px 16px 44px;
+      overflow: hidden;
+    }
+    .about-statement {
+      max-width: 100%;
+      font-size: clamp(38px, 10.2vw, 58px);
+      line-height: 1.08;
+      letter-spacing: -.075em;
+      overflow-wrap: anywhere;
+    }
+
+    .intro { padding: 30px 0 42px; }
+    .intro-story { width: 100%; padding: 0 18px; }
+    .about-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      width: 100%;
+      gap: 10px;
+      overflow: visible;
+      margin: 0 0 28px;
+    }
+    .about-gallery img,
+    .about-gallery img:nth-child(n) {
+      width: 100%;
+      height: clamp(130px, 43vw, 190px);
+      min-width: 0;
+      order: initial;
+    }
+    .about-gallery img:first-child { grid-column: span 2; }
+    .about-gallery img:nth-child(2) { object-position: center 35%; }
+    .about-gallery img:nth-child(3) { object-position: center 56%; }
+    .about-gallery img:nth-child(4) { object-position: center 54%; }
+
+    .intro-copy {
+      width: 100%;
+      max-width: 100%;
+      margin: 32px 0 0;
+      font-size: clamp(20px, 5.5vw, 24px);
+      line-height: 1.42;
+      letter-spacing: -.035em;
+      overflow-wrap: anywhere;
+    }
+    .intro-copy p { margin-bottom: 0; }
+    .education {
+      width: 100%;
+      margin: 32px 0 0;
+      padding-top: 16px;
+    }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
